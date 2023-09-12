@@ -10,6 +10,9 @@ const customTwMerge = extendTailwindMerge({
     },
 })
 
-export const cn = (...inputs: ClassValue[]) => {
+export function cn(...inputs: ClassValue[]) {
     return customTwMerge(clsx(inputs))
+}
+export function getSafeErrorMessage(error: unknown) {
+    return error && error instanceof Error ? error.message : "Unknown error"
 }

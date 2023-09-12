@@ -22,6 +22,10 @@ export const extendedTheme = {
             100: "hsl(var(--purple-100))",
             400: "hsl(var(--purple-400))",
         },
+        destructive: {
+            DEFAULT: "hsl(var(--destructive-400))",
+            400: "hsl(var(--destructive-400))",
+        },
         neutral: {
             DEFAULT: "hsl(var(--neutral-400))",
             900: "hsl(var(--neutral-900))",

@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter, Josefin_Sans } from "next/font/google"
 import { TanstackProvider } from "@/components/tanstack-provider"
+import { Toaster } from "react-hot-toast"
 
 const primary = Inter({ subsets: ["latin"], variable: "--font-primary" })
 const secondary = Josefin_Sans({
@@ -29,6 +30,7 @@ export default function RootLayout({
             <body
                 className={`${primary.variable} ${secondary.variable} grainy-bg relative min-h-screen overflow-hidden bg-gray-50 font-primary text-size-400 text-neutral-900`}
             >
+                <Toaster />
                 <div
                     className="absolute left-[10%] z-[-1] h-[20rem] w-[20rem] bg-orange-100 blur-[11rem] md:h-[30rem] md:w-[45rem]"
                     aria-hidden={true}
