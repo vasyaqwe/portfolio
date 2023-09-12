@@ -15,7 +15,7 @@ export const Textarea = ({ invalid, className = "", ...rest }: InputProps) => {
         <>
             <textarea
                 className={cn(
-                    `min-h-[7rem] bg-primary-800 rounded-xl w-full
+                    `bg-primary-800 min-h-[7rem] w-full rounded-xl
                         border px-3 py-2 text-neutral-900 
                 `,
                     style,
@@ -23,7 +23,7 @@ export const Textarea = ({ invalid, className = "", ...rest }: InputProps) => {
                 )}
                 {...rest}
             />
-            {invalid && <p className={`mt-1 text-danger-400`}>{invalid}</p>}
+            {invalid && <p className={`text-danger-400 mt-1`}>{invalid}</p>}
         </>
     )
 }

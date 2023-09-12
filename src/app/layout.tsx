@@ -26,14 +26,14 @@ export default function RootLayout({
             className="overflow-x-hidden "
         >
             <body
-                className={`${primary.variable} ${secondary.variable} min-h-screen relative overflow-hidden font-primary text-neutral-900 bg-gray-50 grainy-bg text-size-400`}
+                className={`${primary.variable} ${secondary.variable} grainy-bg relative min-h-screen overflow-hidden bg-gray-50 font-primary text-size-400 text-neutral-900`}
             >
                 <div
-                    className="bg-orange-100 z-[-1] absolute left-[10%] w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] blur-[11rem]"
+                    className="absolute left-[10%] z-[-1] h-[20rem] w-[20rem] bg-orange-100 blur-[11rem] md:h-[30rem] md:w-[45rem]"
                     aria-hidden={true}
                 />
                 <div
-                    className="bg-purple-100 z-[-1] left-[40%] absolute w-[20rem] h-[20rem] md:w-[30rem] md:h-[30rem] blur-[11rem]"
+                    className="absolute left-[40%] z-[-1] h-[20rem] w-[20rem] bg-purple-100 blur-[11rem] md:h-[30rem] md:w-[30rem]"
                     aria-hidden={true}
                 />
                 <Navbar />

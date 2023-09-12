@@ -33,7 +33,7 @@ const nav = [
 export function Navbar() {
     return (
         <motion.nav
-            className="fixed top-0 left-1/2
+            className="fixed left-1/2 top-0
         bg-white/80 shadow-md backdrop-blur-md sm:top-6 sm:rounded-full"
             variants={bounceIn({ direction: "down", centerX: true })}
             initial={"hidden"}
@@ -44,7 +44,7 @@ export function Navbar() {
                     <li key={item.label}>
                         <Link
                             href={item.href}
-                            className="px-3 focus-state py-2 inline-block text-neutral"
+                            className="focus-state inline-block px-3 py-2 text-neutral"
                         >
                             {item.label}
                         </Link>

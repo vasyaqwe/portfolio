@@ -13,7 +13,7 @@ export function ContactForm() {
                 </button>{" "}
                 or with the form below.
             </p>
-            <form className="w-full max-w-lg mx-auto flex flex-col gap-3 mt-6 md:mt-10">
+            <form className="mx-auto mt-6 flex w-full max-w-lg flex-col gap-3 md:mt-10">
                 <Input placeholder="Your email" />
                 <Textarea placeholder="Your message" />
                 <Button className="self-center">

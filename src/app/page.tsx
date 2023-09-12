@@ -16,28 +16,28 @@ export default function Home() {
                 variants={bounceIn({ direction: "down", delay: 0.2 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="pt-32 container"
+                className="container pt-32"
             >
                 <Image
-                    className="w-32 h-32 shadow-lg border-4 mx-auto border-white rounded-full object-cover object-top"
+                    className="mx-auto h-32 w-32 rounded-full border-4 border-white object-cover object-top shadow-lg"
                     src={avatar}
                     alt={"Vasyl Polishchuk"}
                 />
-                <p className="text-size-500 text-center mt-4 md:mt-6">
+                <p className="mt-4 text-center text-size-500 md:mt-6">
                     <strong>Hi! I'm Vasya</strong>, a{" "}
                     <strong>front-end developer.</strong>
                     <br /> Currently working on becoming a full-stack one,{" "}
                     <br />
                     focusing on <strong>React & Next.js.</strong>
                 </p>
-                <div className="flex flex-wrap gap-2 mt-4 md:mt-8 justify-center">
+                <div className="mt-4 flex flex-wrap justify-center gap-2 md:mt-8">
                     <Button
                         asChild
                         className="group"
                     >
                         <Link href={"#contact"}>
                             Contact me{" "}
-                            <Icons.arrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <Icons.arrowRight className="transition-transform group-hover:translate-x-1" />
                         </Link>
                     </Button>
                     <Button
