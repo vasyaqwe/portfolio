@@ -1,15 +1,16 @@
 "use client"
-import { Button } from "@/components/layout/ui/button"
-import { Icons } from "@/components/layout/ui/icons"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/components/ui/icons"
 import avatar from "@public/images/avatar.jpg"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { bounceIn } from "@/lib/motion"
+import { ContactForm } from "@/components/contact-form"
 
 export default function Home() {
     return (
-        <>
+        <div className="flex flex-col gap-10 md:gap-16">
             <motion.section
                 id="home"
                 variants={bounceIn({ direction: "down", delay: 0.2 })}
@@ -88,7 +89,7 @@ export default function Home() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="mx-auto block origin-top mt-10 md:mt-16"
+                className="mx-auto block origin-top"
                 aria-hidden={true}
             >
                 <Icons.arrowDownLong className=" mx-auto" />
@@ -98,7 +99,7 @@ export default function Home() {
                 variants={bounceIn({ delay: 0.4 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="container text-center mt-10 md:mt-16"
+                className="container text-center"
             >
                 <h2 className="text-size-800">About me</h2>
                 <p className="leading-loose">
@@ -115,14 +116,22 @@ export default function Home() {
                     <strong>full-stack development</strong> just recently.{" "}
                     <br /> I'm very passionate about web dev, and always try to
                     stay up-to-date with the latest technologies. <br /> I love
-                    web dev and I love to learn new stuff about it. <br /> I
-                    love to do it right, always keep my HTML semantic😅
+                    web dev and I love to learn new stuff about it. I love to do
+                    it right, always keep my HTML semantic😅
                 </p>
                 <p className="mt-2">
                     Outside of coding - <strong>I'm into gaming</strong>. Been
                     gaming my whole life.
                 </p>
             </motion.section>
-        </>
+            <motion.section
+                id="contact"
+                className="text-center"
+            >
+                <h2 className="text-size-800">Contact me</h2>
+
+                <ContactForm />
+            </motion.section>
+        </div>
     )
 }

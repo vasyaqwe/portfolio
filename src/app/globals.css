@@ -29,7 +29,7 @@
 }
 
 .focus-state {
-  @apply rounded-full focus-visible:outline outline-2 outline-offset-2 outline-neutral-400;
+  @apply focus-visible:outline outline-2 outline-offset-2 outline-neutral-400;
 }
 
 h1,

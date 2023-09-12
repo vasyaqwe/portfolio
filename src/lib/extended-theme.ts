@@ -7,9 +7,9 @@ export const extendedTheme = {
     },
     screens: {
         xs: "456px",
-        lg: "768px",
-        xl: "768px",
-        "2xl": "768px",
+        lg: "832px",
+        xl: "832px",
+        "2xl": "832px",
     },
     colors: {
         orange: {

@@ -23,7 +23,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="overflow-hidden "
+            className="overflow-x-hidden "
         >
             <body
                 className={`${primary.variable} ${secondary.variable} min-h-screen relative overflow-hidden font-primary text-neutral-900 bg-gray-50 grainy-bg text-size-400`}
