@@ -6,11 +6,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { bounceIn } from "@/lib/motion"
-import { ContactForm } from "@/components/contact-form"
+import { ContactForm } from "@/components/forms/contact-form"
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-10 md:gap-16">
+        <div className="flex flex-col gap-10 sm:gap-14 md:gap-20">
             <motion.section
                 id="home"
                 variants={bounceIn({ direction: "down", delay: 0.2 })}

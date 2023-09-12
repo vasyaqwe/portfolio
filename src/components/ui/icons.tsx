@@ -88,16 +88,16 @@ export const Icons = {
             <path
                 d="M1 64L6.5 70L12 64"
                 className="stroke-neutral-400/50"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M6.5 1V69.25"
                 className="stroke-neutral-400/50"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     ),
