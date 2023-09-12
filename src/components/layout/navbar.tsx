@@ -33,7 +33,7 @@ const nav = [
 export function Navbar() {
     return (
         <motion.nav
-            className="fixed left-1/2 top-0
+            className="fixed left-1/2 top-0 z-10
         bg-white/80 shadow-md backdrop-blur-md sm:top-6 sm:rounded-full"
             variants={bounceIn({ direction: "down", centerX: true })}
             initial={"hidden"}

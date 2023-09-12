@@ -8,8 +8,23 @@
   --orange-100: 10 93% 92%;
 
   --neutral-900: 261 46% 15%;
+  --neutral-700: 220 9% 36%;
   --neutral-400: 220 9% 46%;
-  --neutral-200: 257 14% 92%;
+  --neutral-200: 220 13% 91%;
+  --neutral-100: 220 13% 94%;
+
+  --typescript: 211 60% 48%;
+  --react: 195 82% 44%;
+  --vite: 346 55% 64%;
+  --tailwindcss: 187 53% 47%;
+  --expressjs: 60 2% 20%;
+  --nodejs: 110 39% 46%;
+  --mongodb: 112 45% 46%;
+  --zod: 231 49% 49%;
+  --html: 12 78% 52%;
+  --css: 226 80% 57%;
+  --javascript: 54 93% 35%;
+  --framermotion: 297 95% 42%;
 
   --destructive-400: 0 88% 67%;
 
@@ -38,6 +53,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-secondary);
+  line-height: 1;
   font-weight: 600;
 }
 

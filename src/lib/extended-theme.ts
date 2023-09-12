@@ -29,8 +29,46 @@ export const extendedTheme = {
         neutral: {
             DEFAULT: "hsl(var(--neutral-400))",
             900: "hsl(var(--neutral-900))",
+            700: "hsl(var(--neutral-700))",
             400: "hsl(var(--neutral-400))",
             200: "hsl(var(--neutral-200))",
+            100: "hsl(var(--neutral-100))",
+        },
+        typescript: {
+            DEFAULT: "hsl(var(--typescript))",
+        },
+        react: {
+            DEFAULT: "hsl(var(--react))",
+        },
+        vite: {
+            DEFAULT: "hsl(var(--vite))",
+        },
+        tailwindcss: {
+            DEFAULT: "hsl(var(--tailwindcss))",
+        },
+        expressjs: {
+            DEFAULT: "hsl(var(--expressjs))",
+        },
+        nodejs: {
+            DEFAULT: "hsl(var(--nodejs))",
+        },
+        mongodb: {
+            DEFAULT: "hsl(var(--mongodb))",
+        },
+        zod: {
+            DEFAULT: "hsl(var(--zod))",
+        },
+        html: {
+            DEFAULT: "hsl(var(--html))",
+        },
+        css: {
+            DEFAULT: "hsl(var(--css))",
+        },
+        javascript: {
+            DEFAULT: "hsl(var(--javascript))",
+        },
+        framermotion: {
+            DEFAULT: "hsl(var(--framermotion))",
         },
     },
     fontSize: {

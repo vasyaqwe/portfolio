@@ -7,10 +7,12 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { bounceIn } from "@/lib/motion"
 import { ContactForm } from "@/components/forms/contact-form"
+import { projects } from "@/config"
+import { Project } from "@/components/project"
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-10 sm:gap-14 md:gap-20">
+        <div className="flex flex-col gap-10 sm:gap-14 md:gap-20 xl:gap-24">
             <motion.section
                 id="home"
                 variants={bounceIn({ direction: "down", delay: 0.2 })}
@@ -23,7 +25,7 @@ export default function Home() {
                     src={avatar}
                     alt={"Vasyl Polishchuk"}
                 />
-                <p className="mt-4 text-center text-size-500 md:mt-6">
+                <p className="mt-4 text-center text-size-500 leading-relaxed md:mt-6">
                     <strong>Hi! I'm Vasya</strong>, a{" "}
                     <strong>front-end developer.</strong>
                     <br /> Currently working on becoming a full-stack one,{" "}
@@ -89,10 +91,9 @@ export default function Home() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="mx-auto block origin-top"
                 aria-hidden={true}
             >
-                <Icons.arrowDownLong className=" mx-auto" />
+                <Icons.arrowDownLong className="mx-auto" />
             </motion.span>
             <motion.section
                 id="about"
@@ -102,7 +103,7 @@ export default function Home() {
                 className="container text-center"
             >
                 <h2 className="text-size-800">About me</h2>
-                <p className="leading-loose">
+                <p>
                     I'm from Ukraine, and I've been{" "}
                     <strong>
                         developing websites for almost two years now
@@ -123,6 +124,18 @@ export default function Home() {
                     Outside of coding - <strong>I'm into gaming</strong>. Been
                     gaming my whole life.
                 </p>
+            </motion.section>
+            <motion.section
+                id="projects"
+                className="container"
+            >
+                <h2 className="text-center text-size-800">My projects</h2>
+                {projects.map((project) => (
+                    <Project
+                        key={project.name}
+                        project={project}
+                    />
+                ))}
             </motion.section>
             <motion.section
                 id="contact"
