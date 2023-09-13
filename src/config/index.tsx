@@ -10,6 +10,33 @@ import timenow from "@public/images/timenow.png"
 import faq from "@public/images/faq.png"
 import { Project } from "@/types"
 
+export const nav = [
+    {
+        label: "Home",
+        href: "#home",
+    },
+    {
+        label: "About",
+        href: "#about",
+    },
+    {
+        label: "Projects",
+        href: "#projects",
+    },
+    {
+        label: "Skills",
+        href: "#skills",
+    },
+    {
+        label: "Experience",
+        href: "#experience",
+    },
+    {
+        label: "Contact",
+        href: "#contact",
+    },
+] as const
+
 export const projects: Project[] = [
     {
         name: "Connectr",

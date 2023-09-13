@@ -9,11 +9,13 @@ import { bounceIn } from "@/lib/motion"
 import { ContactForm } from "@/components/forms/contact-form"
 import { projects } from "@/config"
 import { Project } from "@/components/project"
+import { Section } from "@/components/section"
 
 export default function Home() {
     return (
         <div className="flex flex-col gap-10 sm:gap-14 md:gap-24 xl:gap-32">
-            <motion.section
+            <Section
+                section="Home"
                 id="home"
                 variants={bounceIn({ direction: "down", delay: 0.1 })}
                 initial={"hidden"}
@@ -86,7 +88,7 @@ export default function Home() {
                         </Link>
                     </Button>
                 </div>
-            </motion.section>
+            </Section>
             <motion.span
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -95,7 +97,8 @@ export default function Home() {
             >
                 <Icons.arrowDownLong className="mx-auto" />
             </motion.span>
-            <motion.section
+            <Section
+                section="About"
                 id="about"
                 variants={bounceIn({ delay: 0.25 })}
                 initial={"hidden"}
@@ -131,8 +134,10 @@ export default function Home() {
                     Outside of coding - <strong>I'm into gaming</strong>. Been
                     gaming my whole life.
                 </p>
-            </motion.section>
-            <motion.section
+            </Section>
+            <Section
+                threshold={0.5}
+                section="Projects"
                 id="projects"
                 className="container scroll-mt-32"
             >
@@ -143,15 +148,16 @@ export default function Home() {
                         project={project}
                     />
                 ))}
-            </motion.section>
-            <motion.section
+                <div className="flex"></div>
+            </Section>
+            <Section
+                section="Contact"
                 id="contact"
                 className="container text-center"
             >
                 <h2 className="mb-5 text-size-800">Contact me</h2>
-
                 <ContactForm />
-            </motion.section>
+            </Section>
         </div>
     )
 }

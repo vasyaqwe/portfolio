@@ -10,7 +10,7 @@ export function Pill({
     return (
         <li
             className={cn(
-                `rounded-full px-3 text-[.75rem] shadow-md lg:text-size-300`,
+                `rounded-full px-[.66rem] text-[.75rem] shadow-md lg:text-size-300`,
                 className
             )}
             style={{

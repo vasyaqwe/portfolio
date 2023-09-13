@@ -1,3 +1,4 @@
+import { nav } from "@/config"
 import { StaticImageData } from "next/image"
 
 export type HomepageListItem = {
@@ -14,3 +15,5 @@ export type Project = {
     demoLink: string
     githubLink?: string
 }
+
+export type Section = (typeof nav)[number]["label"]

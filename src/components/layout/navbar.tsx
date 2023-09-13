@@ -1,40 +1,13 @@
 "use client"
+import { nav } from "@/config"
 import { bounceIn } from "@/lib/motion"
+import { useGlobalStore } from "@/stores/use-global-store"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { useState } from "react"
-
-const nav = [
-    {
-        label: "Home",
-        href: "#home",
-    },
-    {
-        label: "About",
-        href: "#about",
-    },
-    {
-        label: "Projects",
-        href: "#projects",
-    },
-    {
-        label: "Skills",
-        href: "#skills",
-    },
-    {
-        label: "Experience",
-        href: "#experience",
-    },
-    {
-        label: "Contact",
-        href: "#contact",
-    },
-] as const
 
 export function Navbar() {
-    const [activeLink, setActiveLink] = useState<(typeof nav)[number]["label"]>(
-        nav[0].label
-    )
+    const { activeSection, setActiveSection, setlinkLastClickedAt } =
+        useGlobalStore()
 
     return (
         <>
@@ -59,17 +32,20 @@ export function Navbar() {
                             className="relative"
                         >
                             <Link
-                                onClick={() => setActiveLink(item.label)}
+                                onClick={() => {
+                                    setActiveSection(item.label)
+                                    setlinkLastClickedAt(Date.now())
+                                }}
                                 href={item.href}
                                 className={`focus-state  inline-block rounded-full px-4 py-[2px] transition-colors hover:text-neutral-900 ${
-                                    activeLink === item.label
+                                    activeSection === item.label
                                         ? "text-neutral-900"
                                         : "text-neutral"
                                 }`}
                             >
                                 {item.label}
 
-                                {activeLink === item.label && (
+                                {activeSection === item.label && (
                                     <motion.span
                                         layoutId="activeLink"
                                         transition={{
