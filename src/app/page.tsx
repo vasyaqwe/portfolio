@@ -12,10 +12,10 @@ import { Project } from "@/components/project"
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-10 sm:gap-14 md:gap-20 xl:gap-28">
+        <div className="flex flex-col gap-10 sm:gap-14 md:gap-24 xl:gap-32">
             <motion.section
                 id="home"
-                variants={bounceIn({ direction: "down", delay: 0.2 })}
+                variants={bounceIn({ direction: "down", delay: 0.1 })}
                 initial={"hidden"}
                 animate={"visible"}
                 className="container pt-32"
@@ -90,17 +90,17 @@ export default function Home() {
             <motion.span
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.2 }}
                 aria-hidden={true}
             >
                 <Icons.arrowDownLong className="mx-auto" />
             </motion.span>
             <motion.section
                 id="about"
-                variants={bounceIn({ delay: 0.4 })}
+                variants={bounceIn({ delay: 0.25 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="mx-auto max-w-[55rem] px-6 text-center"
+                className="mx-auto max-w-[55rem] scroll-mt-32 px-6 text-center"
             >
                 <h2 className="mb-8 text-size-800">About me</h2>
                 <p>
@@ -134,7 +134,7 @@ export default function Home() {
             </motion.section>
             <motion.section
                 id="projects"
-                className="container"
+                className="container scroll-mt-32"
             >
                 <h2 className="mb-12 text-center text-size-800">My projects</h2>
                 {projects.map((project) => (
