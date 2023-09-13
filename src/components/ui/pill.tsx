@@ -1,7 +1,18 @@
-export function Pill({ text }: { text: string }) {
+import { cn } from "@/lib/utils"
+
+export function Pill({
+    text,
+    className = "",
+}: {
+    text: string
+    className?: string
+}) {
     return (
         <li
-            className={`rounded-full  px-3 text-size-300 shadow-md`}
+            className={cn(
+                `rounded-full px-3 text-[.75rem] shadow-md lg:text-size-300`,
+                className
+            )}
             style={{
                 color: `hsl(var(--${removePeriodsAndHyphens(text)}))`,
                 backgroundColor: `hsl(var(--${removePeriodsAndHyphens(

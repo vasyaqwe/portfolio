@@ -8,12 +8,13 @@ import quizzical from "@public/images/quizzical.png"
 import indiebrew from "@public/images/indiebrew.png"
 import timenow from "@public/images/timenow.png"
 import faq from "@public/images/faq.png"
+import { Project } from "@/types"
 
-export const projects = [
+export const projects: Project[] = [
     {
         name: "Connectr",
         description:
-            "A social media application. You can create an account, and connect with people, create posts & comments, and like them.",
+            "A social media app. Create an account, connect with people, create posts & comments, and like them.",
         image: connectr,
         tags: [
             "Typescript",
@@ -59,6 +60,7 @@ export const projects = [
         tags: ["Typescript", "React", "Vite", "TailwindCSS", "Framer-motion"],
         image: hoobank,
         githubLink: "https://github.com/vasyaqwe/hoobank",
+        demoLink: "https://hoobank-vasyaqwe.netlify.app/",
     },
     {
         name: "Drone.Series",
@@ -102,4 +104,4 @@ export const projects = [
         image: faq,
         demoLink: "https://faq2222.netlify.app/",
     },
-] as const
+]

@@ -100,7 +100,7 @@ export default function Home() {
                 variants={bounceIn({ delay: 0.4 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="container text-center"
+                className="mx-auto max-w-[55rem] px-6 text-center"
             >
                 <h2 className="mb-8 text-size-800">About me</h2>
                 <p>
@@ -108,17 +108,24 @@ export default function Home() {
                     <strong>
                         developing websites for almost two years now
                     </strong>
-                    , and{" "}
+                    , <br /> and{" "}
                     <strong>
                         have been working on real-world projects for a year
                     </strong>
-                    . I started my journey purely with{" "}
-                    <strong>front-end</strong>, and have started going into{" "}
+                    .
+                </p>
+                <p>
+                    I started my journey purely with <strong>front-end</strong>,
+                    and have started going into{" "}
                     <strong>full-stack development</strong> just recently.{" "}
-                    <br /> I'm very passionate about web dev, and always try to
-                    stay up-to-date with the latest technologies. <br /> I love
-                    web dev and I love to learn new stuff about it. I love to do
-                    it right, always keep my HTML semantic😅
+                </p>
+                <p>
+                    I'm very passionate about web dev, and always try to stay
+                    up-to-date with the latest technologies.
+                </p>
+                <p>
+                    I love web dev and I love to learn new stuff about it. I
+                    love to do it right, always keep my HTML semantic😅
                 </p>
                 <p className="mt-2">
                     Outside of coding - <strong>I'm into gaming</strong>. Been

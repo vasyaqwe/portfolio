@@ -57,7 +57,7 @@ export function ContactForm() {
                 <Tooltip text={!copied ? "Copy to clipboard?" : "Copied!"}>
                     <button
                         onClick={() => onCopy(email)}
-                        className="underline hover:opacity-60"
+                        className="focus-state underline hover:opacity-60"
                     >
                         {email}
                     </button>

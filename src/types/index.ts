@@ -5,3 +5,12 @@ export type HomepageListItem = {
     description: string
     image: StaticImageData
 }
+
+export type Project = {
+    name: string
+    description: string
+    image: StaticImageData
+    tags: string[]
+    demoLink: string
+    githubLink?: string
+}
