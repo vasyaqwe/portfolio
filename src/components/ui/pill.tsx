@@ -14,13 +14,9 @@ export function Pill({
                 className
             )}
             style={{
-                color: `hsl(var(--${removePeriodsAndHyphens(text)}))`,
-                backgroundColor: `hsl(var(--${removePeriodsAndHyphens(
-                    text
-                )}) / .15)`,
-                border: `1px solid hsl(var(--${removePeriodsAndHyphens(
-                    text
-                )}) / .4)`,
+                color: `hsl(var(--${formatText(text)}))`,
+                backgroundColor: `hsl(var(--${formatText(text)}) / .15)`,
+                border: `1px solid hsl(var(--${formatText(text)}) / .4)`,
             }}
         >
             {text}
@@ -28,6 +24,6 @@ export function Pill({
     )
 }
 
-function removePeriodsAndHyphens(str: string) {
-    return str.replace(/[.-]/g, "").toLowerCase()
+function formatText(str: string) {
+    return str.replace(/[.-]/g, "").toLowerCase().replace(" ", "")
 }

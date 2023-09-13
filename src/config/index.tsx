@@ -132,3 +132,22 @@ export const projects: Project[] = [
         demoLink: "https://faq2222.netlify.app/",
     },
 ]
+
+export const skills = [
+    "Next.js",
+    "React Query",
+    "Typescript",
+    "React",
+    "Vite",
+    "TailwindCSS",
+    "Express.js",
+    "MongoDB",
+    "Node.js",
+    "Zod",
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Framer-motion",
+    "Zustand",
+    "Prisma",
+] as const
