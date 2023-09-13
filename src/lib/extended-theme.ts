@@ -31,6 +31,7 @@ export const extendedTheme = {
             900: "hsl(var(--neutral-900))",
             700: "hsl(var(--neutral-700))",
             400: "hsl(var(--neutral-400))",
+            300: "hsl(var(--neutral-300))",
             200: "hsl(var(--neutral-200))",
             100: "hsl(var(--neutral-100))",
         },

@@ -11,12 +11,18 @@ import { useFormValidation } from "@/hooks/use-form-validation"
 import { ChangeEvent, useState } from "react"
 import { contactSchema } from "@/lib/validations/contact"
 import * as z from "zod"
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
+import { Tooltip } from "../ui/tooltip"
+
+const email = "vasylpolishchuk22@gmail.com"
 
 export function ContactForm() {
     const [formData, setFormData] = useState<z.infer<typeof contactSchema>>({
         email: "",
         message: "",
     })
+
+    const { copied, onCopy } = useCopyToClipboard()
 
     const { isLoading, mutate: onSubmit } = useMutation(
         async () => {
@@ -48,9 +54,14 @@ export function ContactForm() {
         <>
             <p>
                 You can contact me directly at{" "}
-                <button className="underline">
-                    vasylpolishchuk22@gmail.com
-                </button>{" "}
+                <Tooltip text={!copied ? "Copy to clipboard?" : "Copied!"}>
+                    <button
+                        onClick={() => onCopy(email)}
+                        className="underline hover:opacity-60"
+                    >
+                        {email}
+                    </button>
+                </Tooltip>{" "}
                 or with the form below.
             </p>
             <form

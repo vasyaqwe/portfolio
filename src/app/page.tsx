@@ -139,9 +139,9 @@ export default function Home() {
             </motion.section>
             <motion.section
                 id="contact"
-                className="text-center"
+                className="container text-center"
             >
-                <h2 className="text-size-800">Contact me</h2>
+                <h2 className="mb-4 text-size-800">Contact me</h2>
 
                 <ContactForm />
             </motion.section>
