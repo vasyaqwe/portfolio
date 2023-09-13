@@ -12,7 +12,7 @@ import { Project } from "@/components/project"
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-10 sm:gap-14 md:gap-20 xl:gap-24">
+        <div className="flex flex-col gap-10 sm:gap-14 md:gap-20 xl:gap-28">
             <motion.section
                 id="home"
                 variants={bounceIn({ direction: "down", delay: 0.2 })}
@@ -102,7 +102,7 @@ export default function Home() {
                 animate={"visible"}
                 className="container text-center"
             >
-                <h2 className="text-size-800">About me</h2>
+                <h2 className="mb-8 text-size-800">About me</h2>
                 <p>
                     I'm from Ukraine, and I've been{" "}
                     <strong>
@@ -129,7 +129,7 @@ export default function Home() {
                 id="projects"
                 className="container"
             >
-                <h2 className="text-center text-size-800">My projects</h2>
+                <h2 className="mb-12 text-center text-size-800">My projects</h2>
                 {projects.map((project) => (
                     <Project
                         key={project.name}
@@ -141,7 +141,7 @@ export default function Home() {
                 id="contact"
                 className="container text-center"
             >
-                <h2 className="mb-4 text-size-800">Contact me</h2>
+                <h2 className="mb-5 text-size-800">Contact me</h2>
 
                 <ContactForm />
             </motion.section>

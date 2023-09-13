@@ -22,7 +22,7 @@ export const Tooltip = ({
         clearTimeout(timeoutId) // Clear any ongoing timeout
         const id = setTimeout(() => {
             setVisible(true)
-        }, 400)
+        }, 200)
         setTimeoutId(id)
     }
 
@@ -42,7 +42,7 @@ export const Tooltip = ({
             {...rest}
         >
             <span
-                className={`absolute bottom-7 left-1/2 w-max -translate-x-1/2 rounded-md border border-neutral-300 bg-neutral-50 px-3 
+                className={`absolute bottom-8 left-1/2 w-max -translate-x-1/2 rounded-md border border-neutral-300 bg-neutral-50 px-3 
                 py-2 text-sm shadow-md transition-all
                 ${
                     visible

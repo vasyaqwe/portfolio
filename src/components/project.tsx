@@ -1,5 +1,4 @@
 import { projects } from "@/config"
-import Link from "next/link"
 import React from "react"
 import { Pill } from "./ui/pill"
 import Image from "next/image"
@@ -10,7 +9,7 @@ export function Project({ project }: { project: ProjectProps }) {
     return (
         <article
             className={`group relative mt-5 cursor-default overflow-hidden rounded-md border border-neutral-200 bg-neutral-100 px-5
-             py-6 shadow-md transition-colors first-of-type:mt-9 hover:bg-neutral-200 sm:mt-8 sm:rounded-lg sm:px-7 sm:py-8 md:grid
+             py-6 shadow-md transition-colors hover:bg-neutral-200 sm:mt-8 sm:rounded-lg sm:px-7 sm:py-8 md:grid
               md:min-h-[300px] md:grid-cols-2 md:gap-16 md:p-10 md:pb-0
              `}
         >
