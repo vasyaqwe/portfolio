@@ -105,7 +105,7 @@ export default function Home() {
                 variants={bounceIn({ delay: 0.25 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="mx-auto max-w-[55rem] scroll-mt-32 px-6 text-center"
+                className="mx-auto max-w-[55rem] scroll-mt-40 px-6 text-center"
             >
                 <h2 className="mb-8 text-size-800">About me</h2>
                 <p>
@@ -144,7 +144,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 section="Projects"
                 id="projects"
-                className="scroll-mt-32 px-3 md:px-6"
+                className="scroll-mt-40 px-3 md:px-6"
             >
                 <h2 className="mb-3 text-center text-size-800 md:mb-8">
                     My projects
@@ -164,8 +164,8 @@ export default function Home() {
                 whileInView={"visible"}
                 viewport={{ once: true }}
                 section="Skills"
-                id="projects"
-                className="container scroll-mt-32 px-3 md:px-6"
+                id="skills"
+                className="container scroll-mt-40 px-3 md:px-6"
             >
                 <h2 className="mb-5 text-center text-size-800 md:mb-10">
                     My skills

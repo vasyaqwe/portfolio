@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Inter, Josefin_Sans } from "next/font/google"
 import { TanstackProvider } from "@/components/tanstack-provider"
 import { Toaster } from "react-hot-toast"
+import { Footer } from "@/components/layout/footer"
 
 const primary = Inter({ subsets: ["latin"], variable: "--font-primary" })
 const secondary = Josefin_Sans({
@@ -43,6 +44,7 @@ export default function RootLayout({
                 <TanstackProvider>
                     <Navbar />
                     <main>{children}</main>
+                    <Footer />
                 </TanstackProvider>
             </body>
         </html>
