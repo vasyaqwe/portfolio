@@ -11,6 +11,7 @@ export type Project = {
     name: string
     description: string
     image: StaticImageData
+    imageMobile: StaticImageData
     tags: string[]
     demoLink: string
     githubLink?: string

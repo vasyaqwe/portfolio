@@ -12,8 +12,8 @@ type ProjectProps = (typeof projects)[number]
 export function Project({ project }: { project: ProjectProps }) {
     return (
         <article
-            className={`mb:pb-0 group relative mt-5 w-[310px] flex-shrink-0 cursor-default overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5
-             py-6 pb-0 shadow-md transition-colors hover:bg-neutral-200/75 sm:mt-8 sm:rounded-lg sm:px-7 sm:py-8
+            className={`mb:pb-0 group relative mt-5 flex w-[320px] flex-shrink-0 cursor-default flex-col overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5 py-6
+             pb-0 shadow-md transition-colors hover:bg-neutral-200/75 max-md:max-h-[550px] sm:mt-8 sm:rounded-lg sm:px-7 sm:py-8
               md:grid md:min-h-[300px] md:w-[750px] md:grid-cols-2 md:gap-16 md:p-8 md:pb-0 lg:pb-0
              `}
         >
@@ -22,7 +22,7 @@ export function Project({ project }: { project: ProjectProps }) {
                 <p className="leading-relaxed text-neutral-700">
                     {project.description}
                 </p>
-                <ul className="mt-2 flex flex-wrap gap-2 gap-y-3">
+                <ul className="mb-4 mt-2 flex flex-wrap gap-2 gap-y-3">
                     {project.tags.map((tag) => (
                         <Pill
                             text={tag}
@@ -62,15 +62,27 @@ export function Project({ project }: { project: ProjectProps }) {
                     )}
                 </div>
             </div>
+
+            {/* desktop */}
             <Image
                 draggable={false}
-                className={`row-span-1 self-end rounded-tl-md rounded-tr-md object-cover object-top shadow-md 
-                    transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end md:col-start-2 md:max-h-[340px] md:min-w-[640px]
+                className={`self-end object-cover object-top shadow-md transition-transform 
+                    duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end max-md:hidden md:col-start-2 md:max-h-[340px] md:min-w-[640px]
                      md:rounded-none md:rounded-tl-lg md:shadow-lg group-odd:md:rounded-tr-lg
-                    md:group-hover:-translate-x-3 md:group-hover:-rotate-3  md:group-hover:scale-105
+                    md:group-hover:-translate-x-3 md:group-hover:-rotate-3 md:group-hover:scale-105
                    md:group-odd:group-hover:translate-x-3 md:group-odd:group-hover:rotate-3
                     `}
                 src={project.image}
+                alt={project.name}
+            />
+
+            {/* mobile */}
+            <Image
+                draggable={false}
+                className={`row-span-1 mt-auto self-end rounded-tl-md rounded-tr-md object-cover object-top shadow-md transition-transform 
+                    duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end md:hidden 
+                    `}
+                src={project.imageMobile}
                 alt={project.name}
             />
         </article>
