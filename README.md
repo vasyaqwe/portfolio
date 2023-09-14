@@ -1,4 +1,4 @@
-# [Personal Portfolio](https://vasyldev.ccc)
+# [Personal Portfolio](https://vasyldev.cc)
 
 ## My personal Next.js 13 portfolio.
 
