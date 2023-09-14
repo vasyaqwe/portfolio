@@ -11,8 +11,9 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                default: "bg-neutral-900 text-white border-neutral-900",
-                secondary: "bg-white border-white shadow-sm",
+                default:
+                    "bg-neutral-900 text-white border-neutral-900 shadow-sm",
+                secondary: "bg-white border-white shadow-md",
             },
             size: {
                 default: "h-11 py-[.6rem] px-6",

@@ -41,9 +41,9 @@ export function Slider({ children, className = "", ...rest }: SliderProps) {
 
     return (
         <div
-            {...rest}
             ref={wrapperRef}
             className={cn(`relative`, className)}
+            {...rest}
         >
             {/* Element for Constraints Reference */}
             <div
@@ -58,6 +58,7 @@ export function Slider({ children, className = "", ...rest }: SliderProps) {
 
             {/* Content */}
             <motion.div
+                whileTap={{ cursor: "grabbing" }}
                 ref={contentRef}
                 drag={offset > 0 ? "x" : undefined}
                 dragConstraints={dragFieldRef}

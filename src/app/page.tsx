@@ -11,6 +11,7 @@ import { Section } from "@/components/section"
 import { Slider } from "@/components/slider"
 import { Pill } from "@/components/ui/pill"
 import { DividerArrow } from "@/components/ui/divider-arrow"
+import { MobileSlider } from "@/components/mobile-slider"
 
 export default function Home() {
     return (
@@ -97,7 +98,7 @@ export default function Home() {
                 variants={bounceIn({ delay: 0.25 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="mx-auto max-w-[55rem]  px-6 text-center"
+                className="mx-auto max-w-[55rem] px-6 text-center"
             >
                 <h2 className="mb-8 text-size-800">About me</h2>
                 <p>
@@ -132,24 +133,30 @@ export default function Home() {
             <Section
                 section="Projects"
                 id="projects"
-                className=" px-3 md:px-6"
+                className="px-3 md:px-6"
             >
-                <h2 className="mb-3 text-center text-size-800 md:mb-8">
+                <h2 className="mb-3 text-center text-size-800 xs:mb-6 md:mb-10 xl:mb-12">
                     My projects
                 </h2>
-                <Slider>
+                <Slider className="max-md:hidden">
                     {projects.map((project) => (
                         <Project
                             key={project.name}
-                            project={project}
+                            item={project}
                         />
                     ))}
                 </Slider>
+                <MobileSlider
+                    slidesList={projects}
+                    slide={Project}
+                    sliderClassName="h-[515px]"
+                    className="md:hidden"
+                />
             </Section>
             <Section
                 section="Skills"
                 id="skills"
-                className="container  px-3 md:px-6"
+                className="container px-3 md:px-6"
             >
                 <h2 className="mb-5 text-center text-size-800 md:mb-10">
                     My skills
