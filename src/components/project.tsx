@@ -67,6 +67,7 @@ export function Project({ item }: { item: ProjectProps }) {
 
             {/* desktop */}
             <Image
+                placeholder="blur"
                 draggable={false}
                 className={`self-end rounded-tl-lg rounded-tr-lg object-cover object-top 
                     transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end max-xs:hidden sm:shadow-lg md:col-start-2
