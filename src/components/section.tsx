@@ -20,14 +20,15 @@ export function Section({
     threshold = 0.75,
     ...rest
 }: SectionProps) {
-    const { setActiveSection, linkLastClickedAt, activeSection } =
+    const { setActiveSection, linkLastClickedAt, setlinkLastClickedAt } =
         useGlobalStore()
 
     const { ref, inView } = useInView({ threshold })
     const router = useRouter()
 
     useEffect(() => {
-        router.push(`#${activeSection.toLocaleLowerCase()}`)
+        router.push(`#home`)
+        setlinkLastClickedAt(Date.now())
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

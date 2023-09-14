@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/ui/icons"
 import avatar from "@public/images/avatar.jpg"
@@ -8,9 +9,12 @@ import { ContactForm } from "@/components/forms/contact-form"
 import { projects, skills } from "@/config"
 import { Project } from "@/components/project"
 import { Section } from "@/components/section"
-import { Slider } from "@/components/slider"
 import { Pill } from "@/components/ui/pill"
 import { DividerArrow } from "@/components/ui/divider-arrow"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+import "swiper/css/free-mode"
+import { FreeMode } from "swiper/modules"
 
 export default function Home() {
     return (
@@ -137,14 +141,22 @@ export default function Home() {
                 <h2 className="mb-3 text-center text-size-800 md:mb-8">
                     My projects
                 </h2>
-                <Slider>
+                <Swiper
+                    slidesPerView={"auto"}
+                    spaceBetween={16}
+                    freeMode={true}
+                    modules={[FreeMode]}
+                    className="mySwiper"
+                >
                     {projects.map((project) => (
-                        <Project
+                        <SwiperSlide
+                            className="!w-[320px] md:!w-[740px]"
                             key={project.name}
-                            project={project}
-                        />
+                        >
+                            <Project project={project} />
+                        </SwiperSlide>
                     ))}
-                </Slider>
+                </Swiper>
             </Section>
             <Section
                 section="Skills"

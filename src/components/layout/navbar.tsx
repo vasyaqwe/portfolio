@@ -37,7 +37,7 @@ export function Navbar() {
                                     setlinkLastClickedAt(Date.now())
                                 }}
                                 href={item.href}
-                                className={`focus-state  inline-block rounded-full px-4 py-[2px] transition-colors hover:text-neutral-900 ${
+                                className={`focus-state inline-block rounded-full px-4 py-[2px] transition-colors hover:text-neutral-900 ${
                                     activeSection === item.label
                                         ? "text-neutral-900"
                                         : "text-neutral"
