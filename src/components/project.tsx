@@ -12,9 +12,9 @@ type ProjectProps = (typeof projects)[number]
 export function Project({ project }: { project: ProjectProps }) {
     return (
         <article
-            className={`mb:pb-0 group relative mt-5 flex flex-shrink-0 cursor-default flex-col overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5 py-6
+            className={`mb:pb-0 group relative mt-5 flex w-[320px] flex-shrink-0 cursor-default flex-col overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5 py-6
              pb-0 shadow-md transition-colors hover:bg-neutral-200/75 max-md:max-h-[550px] sm:mt-8 sm:rounded-lg sm:px-7 sm:py-8
-              md:grid md:min-h-[300px] md:grid-cols-2 md:gap-16 md:p-8 md:pb-0 lg:pb-0
+              md:grid md:min-h-[300px] md:w-[750px] md:grid-cols-2 md:gap-16 md:p-8 md:pb-0 lg:pb-0
              `}
         >
             <div className="flex flex-col gap-2 group-odd:col-start-2">
