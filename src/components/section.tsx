@@ -28,6 +28,7 @@ export function Section({
 
     useEffect(() => {
         router.push(`#${activeSection.toLocaleLowerCase()}`)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
