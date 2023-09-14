@@ -138,10 +138,6 @@ export default function Home() {
                 </p>
             </Section>
             <Section
-                variants={bounceIn({})}
-                initial={"hidden"}
-                whileInView={"visible"}
-                viewport={{ once: true }}
                 section="Projects"
                 id="projects"
                 className="scroll-mt-40 px-3 md:px-6"
@@ -159,10 +155,6 @@ export default function Home() {
                 </Slider>
             </Section>
             <Section
-                variants={bounceIn({})}
-                initial={"hidden"}
-                whileInView={"visible"}
-                viewport={{ once: true }}
                 section="Skills"
                 id="skills"
                 className="container scroll-mt-40 px-3 md:px-6"
@@ -189,13 +181,9 @@ export default function Home() {
                 </ul>
             </Section>
             <Section
-                variants={bounceIn({})}
-                initial={"hidden"}
-                whileInView={"visible"}
-                viewport={{ once: true }}
                 section="Contact"
                 id="contact"
-                className="container text-center"
+                className="container scroll-mt-40 text-center"
             >
                 <h2 className="mb-5 text-size-800">Contact me</h2>
                 <ContactForm />
