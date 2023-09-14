@@ -1,10 +1,8 @@
-"use client"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/ui/icons"
 import avatar from "@public/images/avatar.jpg"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { bounceIn } from "@/lib/motion"
 import { ContactForm } from "@/components/forms/contact-form"
 import { projects, skills } from "@/config"
@@ -12,6 +10,7 @@ import { Project } from "@/components/project"
 import { Section } from "@/components/section"
 import { Slider } from "@/components/slider"
 import { Pill } from "@/components/ui/pill"
+import { DividerArrow } from "@/components/ui/divider-arrow"
 
 export default function Home() {
     return (
@@ -91,14 +90,7 @@ export default function Home() {
                     </Button>
                 </div>
             </Section>
-            <motion.span
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2 }}
-                aria-hidden={true}
-            >
-                <Icons.arrowDownLong className="mx-auto" />
-            </motion.span>
+            <DividerArrow />
             <Section
                 section="About"
                 id="about"
