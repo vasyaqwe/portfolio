@@ -26,7 +26,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="overflow-x-hidden scroll-smooth"
+            className="scroll-pt-40 overflow-x-hidden scroll-smooth"
         >
             <body
                 className={`${primary.variable} ${secondary.variable} grainy-bg relative min-h-screen overflow-hidden 

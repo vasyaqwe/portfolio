@@ -97,7 +97,7 @@ export default function Home() {
                 variants={bounceIn({ delay: 0.25 })}
                 initial={"hidden"}
                 animate={"visible"}
-                className="mx-auto max-w-[55rem] scroll-mt-40 px-6 text-center"
+                className="mx-auto max-w-[55rem]  px-6 text-center"
             >
                 <h2 className="mb-8 text-size-800">About me</h2>
                 <p>
@@ -132,7 +132,7 @@ export default function Home() {
             <Section
                 section="Projects"
                 id="projects"
-                className="scroll-mt-40 px-3 md:px-6"
+                className=" px-3 md:px-6"
             >
                 <h2 className="mb-3 text-center text-size-800 md:mb-8">
                     My projects
@@ -149,7 +149,7 @@ export default function Home() {
             <Section
                 section="Skills"
                 id="skills"
-                className="container scroll-mt-40 px-3 md:px-6"
+                className="container  px-3 md:px-6"
             >
                 <h2 className="mb-5 text-center text-size-800 md:mb-10">
                     My skills
@@ -175,7 +175,7 @@ export default function Home() {
             <Section
                 section="Contact"
                 id="contact"
-                className="container scroll-mt-40 text-center"
+                className="container  text-center"
             >
                 <h2 className="mb-5 text-size-800">Contact me</h2>
                 <ContactForm />
