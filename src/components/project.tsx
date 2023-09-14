@@ -62,7 +62,7 @@ export function Project({ project }: { project: ProjectProps }) {
                     )}
                 </div>
             </div>
-            <Image
+            {/* <Image
                 draggable={false}
                 className={`row-span-1 self-end rounded-tl-md rounded-tr-md object-cover object-top shadow-md 
                     transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end md:col-start-2 md:max-h-[340px] md:min-w-[640px]
@@ -72,7 +72,7 @@ export function Project({ project }: { project: ProjectProps }) {
                     `}
                 src={project.image}
                 alt={project.name}
-            />
+            /> */}
         </article>
     )
 }
