@@ -1,3 +1,5 @@
+import eruca from "@public/images/eruca.png"
+import erucaMobile from "@public/images/eruca-mobile.png"
 import connectr from "@public/images/connectr.png"
 import byronConsulting from "@public/images/byron-consulting.png"
 import careerQuest from "@public/images/careerquest.png"
@@ -48,6 +50,15 @@ export const nav = [
 ] as const
 
 export const projects: Project[] = [
+    {
+        name: "Eruca Invest",
+        description:
+            "A landing page for Eruca. Built with Next.js 13, Typescript and TailwindCSS.",
+        image: eruca,
+        imageMobile: erucaMobile,
+        tags: ["Typescript", "Next.js", "TailwindCSS"],
+        demoLink: "https://eruca-landing.vercel.app/",
+    },
     {
         name: "Connectr",
         description:
