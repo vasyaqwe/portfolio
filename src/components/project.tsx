@@ -67,7 +67,7 @@ export function Project({ item }: { item: ProjectProps }) {
 
             {/* desktop */}
             <Image
-                placeholder="blur"
+                loading="eager"
                 draggable={false}
                 className={`self-end rounded-tl-lg rounded-tr-lg object-cover object-top 
                     transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end max-xs:hidden sm:shadow-lg md:col-start-2
@@ -81,6 +81,7 @@ export function Project({ item }: { item: ProjectProps }) {
 
             {/* mobile */}
             <Image
+                loading="eager"
                 draggable={false}
                 className={`row-span-1 mt-auto self-end rounded-tl-md rounded-tr-md object-cover object-top shadow-md transition-transform 
                     duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end xs:hidden 

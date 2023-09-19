@@ -35,7 +35,9 @@ export function ContactForm() {
                 toast.success("Your message is sent!")
             },
             onError: (error) => {
-                toast.error(getSafeErrorMessage(error))
+                toast.error(getSafeErrorMessage(error), {
+                    position: "bottom-center",
+                })
             },
         }
     )

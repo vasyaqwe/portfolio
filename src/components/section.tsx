@@ -5,7 +5,6 @@ import { HTMLMotionProps, motion } from "framer-motion"
 import React, { ReactNode, useEffect } from "react"
 import { HTMLAttributes } from "react"
 import { useInView } from "react-intersection-observer"
-import { useRouter } from "next/navigation"
 
 type SectionProps = HTMLAttributes<HTMLElement> &
     HTMLMotionProps<"section"> & {
@@ -20,17 +19,9 @@ export function Section({
     threshold = 0.75,
     ...rest
 }: SectionProps) {
-    const { setActiveSection, linkLastClickedAt, setlinkLastClickedAt } =
-        useGlobalStore()
+    const { setActiveSection, linkLastClickedAt } = useGlobalStore()
 
     const { ref, inView } = useInView({ threshold })
-    const router = useRouter()
-
-    useEffect(() => {
-        router.push(`#home`)
-        setlinkLastClickedAt(Date.now())
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
 
     useEffect(() => {
         if (inView && Date.now() - linkLastClickedAt > 500) {
