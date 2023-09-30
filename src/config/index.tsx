@@ -57,7 +57,7 @@ export const projects: Project[] = [
         image: eruca,
         imageMobile: erucaMobile,
         tags: ["Typescript", "Next.js", "TailwindCSS"],
-        demoLink: "https://eruca-landing.vercel.app/",
+        demoLink: "https://www.erucainvest.com/",
     },
     {
         name: "Connectr",
