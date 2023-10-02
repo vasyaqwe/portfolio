@@ -1,10 +1,10 @@
 "use client"
 import { projects } from "@/config"
 import React from "react"
-import { Pill } from "./ui/pill"
+import { Pill } from "@/components/ui/pill"
 import Image from "next/image"
-import { Button } from "./ui/button"
-import { Icons } from "./ui/icons"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/components/ui/icons"
 import Link from "next/link"
 import { motion } from "framer-motion"
 

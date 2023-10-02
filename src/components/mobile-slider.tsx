@@ -1,11 +1,11 @@
 "use client"
-import React, { ComponentType, ReactNode, useState } from "react"
+import React, { ComponentType, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import useMeasure from "react-use-measure"
-import { Button } from "./ui/button"
-import { Icons } from "./ui/icons"
 import { projects } from "@/config"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/components/ui/icons"
 
 type SliderProps = React.ComponentProps<"div"> & {
     className?: string

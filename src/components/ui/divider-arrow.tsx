@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Icons } from "./icons"
+import { Icons } from "@/components/ui/icons"
 
 export function DividerArrow() {
     return (

@@ -1,7 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
 import { extendTailwindMerge } from "tailwind-merge"
 import { extendedTheme } from "./extended-theme"
-import { Section } from "@/types"
 
 const customTwMerge = extendTailwindMerge({
     classGroups: {
