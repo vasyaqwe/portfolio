@@ -1,3 +1,5 @@
+import discusst from "@public/images/discusst.png"
+import discusstMobile from "@public/images/discusst-mobile.png"
 import eruca from "@public/images/eruca.png"
 import erucaMobile from "@public/images/eruca-mobile.png"
 import connectr from "@public/images/connectr.png"
@@ -50,6 +52,16 @@ export const nav = [
 ] as const
 
 export const projects: Project[] = [
+    {
+        name: "Discusst",
+        description:
+            "A modern Reddit clone. Built with Next.js 13, Typescript and TailwindCSS, Uploadthing for image uploads, Next-Auth and Zod for schema validation.",
+        image: discusst,
+        imageMobile: discusstMobile,
+        tags: ["Typescript", "Next.js", "TailwindCSS", "Zod", "Prisma", "SQL"],
+        demoLink: "https://discusst.vercel.app/",
+        githubLink: "https://github.com/vasyaqwe/discusst",
+    },
     {
         name: "Eruca Invest",
         description:

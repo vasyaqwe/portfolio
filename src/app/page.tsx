@@ -162,7 +162,7 @@ export default function Home() {
                     My skills
                 </h2>
                 <p className="mb-5 text-center md:mb-12">
-                    I'm tend to lean towards <strong>modern</strong> stuff, for
+                    I tend to lean towards <strong>modern</strong> stuff, for
                     example, I never learned <strong>Redux</strong>, but chose
                     to use <strong>Zustand</strong> in combination with{" "}
                     <strong>React Query</strong> as my go-to state management
