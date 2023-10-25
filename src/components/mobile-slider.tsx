@@ -62,6 +62,7 @@ export function MobileSlider({
                     onClick={() => setPage(page - 1)}
                 >
                     <Icons.chevronLeft />
+                    <span className="sr-only">Scroll left</span>
                 </Button>
                 <Button
                     disabled={page === projects.length - 1}
@@ -72,6 +73,7 @@ export function MobileSlider({
                     onClick={() => setPage(page + 1)}
                 >
                     <Icons.chevronRight />
+                    <span className="sr-only">Scroll right</span>
                 </Button>
             </div>
         </div>
