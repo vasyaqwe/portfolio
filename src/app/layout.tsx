@@ -26,7 +26,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="scroll-pt-40 antialiased overflow-x-hidden scroll-smooth"
+            className="scroll-pt-40 overflow-x-hidden scroll-smooth antialiased"
         >
             <body
                 className={`${primary.variable} ${secondary.variable} grainy-bg relative min-h-screen overflow-hidden 
@@ -34,10 +34,14 @@ export default function RootLayout({
             >
                 <Toaster />
                 <div
+                    style={{ transform: "translate3d(0, 0, 0)" }}
+                    //perf fix
                     className="absolute left-[10%] z-[-1] h-[20rem] w-[20rem] bg-orange-100 blur-[11rem] md:h-[30rem] md:w-[45rem]"
                     aria-hidden={true}
                 />
                 <div
+                    style={{ transform: "translate3d(0, 0, 0)" }}
+                    //perf fix
                     className="absolute left-[40%] z-[-1] h-[20rem] w-[20rem] bg-purple-100 blur-[11rem] md:h-[30rem] md:w-[30rem]"
                     aria-hidden={true}
                 />
