@@ -14,7 +14,7 @@ export function Project({ item }: { item: ProjectProps }) {
     return (
         <motion.article
             whileTap={{ cursor: "grabbing" }}
-            className={`mb:pb-0 group relative flex cursor-default flex-col overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5 py-6 pb-0
+            className={`mb:pb-0 group snap-center relative flex cursor-default flex-col overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5 py-6 pb-0
              shadow-md transition-colors hover:bg-neutral-200/75 max-md:max-h-[500px] sm:rounded-lg sm:px-7 sm:py-8 md:grid
               md:min-h-[300px] md:w-[750px] md:flex-shrink-0 md:grid-cols-2 md:gap-16 md:p-8 md:pb-0 lg:pb-0
              `}

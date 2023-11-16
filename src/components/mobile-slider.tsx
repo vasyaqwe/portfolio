@@ -26,6 +26,15 @@ export function MobileSlider({
     let prev = usePrevious(page)
     let direction = page > prev! ? 1 : -1
 
+    function debounceButton(e: React.MouseEvent<HTMLButtonElement>) {
+        const target = e.target as HTMLButtonElement
+
+        target.style.setProperty("pointer-events", "none")
+        setTimeout(() => {
+            target.style.setProperty("pointer-events", "auto")
+        }, 200)
+    }
+
     return (
         <div
             className={className}
@@ -46,7 +55,7 @@ export function MobileSlider({
                         animate="center"
                         exit="exit"
                         custom={{ direction, width }}
-                        className={`absolute flex`}
+                        className={`absolute flex will-change-transform`}
                     >
                         {React.createElement(slide, {
                             item: slidesList[page],
@@ -59,7 +68,10 @@ export function MobileSlider({
                     disabled={page === 0}
                     variant={page === 0 ? "secondary" : "default"}
                     size={"icon"}
-                    onClick={() => setPage(page - 1)}
+                    onClick={(e) => {
+                        debounceButton(e)
+                        setPage(page - 1)
+                    }}
                 >
                     <Icons.chevronLeft />
                     <span className="sr-only">Scroll left</span>
@@ -70,7 +82,10 @@ export function MobileSlider({
                         page === projects.length - 1 ? "secondary" : "default"
                     }
                     size={"icon"}
-                    onClick={() => setPage(page + 1)}
+                    onClick={(e) => {
+                        debounceButton(e)
+                        setPage(page + 1)
+                    }}
                 >
                     <Icons.chevronRight />
                     <span className="sr-only">Scroll right</span>

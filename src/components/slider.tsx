@@ -1,6 +1,6 @@
 "use client"
 import React, { ReactNode, useEffect, useRef, useState } from "react"
-import { motion } from "framer-motion"
+import { PanInfo, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 type SliderProps = React.ComponentProps<"div"> & {
@@ -34,6 +34,7 @@ export function Slider({ children, className = "", ...rest }: SliderProps) {
 
         // Check for resizing Events.
         window.addEventListener("resize", updateOffset)
+
         return () => {
             window.removeEventListener("resize", updateOffset)
         }
@@ -61,8 +62,9 @@ export function Slider({ children, className = "", ...rest }: SliderProps) {
                 whileTap={{ cursor: "grabbing" }}
                 ref={contentRef}
                 drag={offset > 0 ? "x" : undefined}
+                dragElastic={0.1}
                 dragConstraints={dragFieldRef}
-                className="flex gap-5"
+                className="flex gap-5 will-change-transform"
             >
                 {children}
             </motion.div>

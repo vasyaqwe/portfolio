@@ -11,7 +11,7 @@ export function Footer() {
                     &copy; {currentYear} Vasyl Polishchuk. All rights reserved.
                 </small>
                 <p className="mt-2">
-                    <strong>About this portfolio:</strong> built with Next.js 13
+                    <strong>About this portfolio:</strong> built with Next.js 14
                     App Router, Typescript, TailwindCSS & Framer-motion, React
                     Email & Resend.
                 </p>
