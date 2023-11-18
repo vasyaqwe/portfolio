@@ -1,3 +1,5 @@
+import convo from "@public/images/convo.png"
+import convoMobile from "@public/images/convo-mobile.png"
 import discusst from "@public/images/discusst.png"
 import discusstMobile from "@public/images/discusst-mobile.png"
 import eruca from "@public/images/eruca.png"
@@ -41,10 +43,6 @@ export const nav = [
         label: "Skills",
         href: "#skills",
     },
-    // {
-    //     label: "Experience",
-    //     href: "#experience",
-    // },
     {
         label: "Contact",
         href: "#contact",
@@ -53,9 +51,27 @@ export const nav = [
 
 export const projects: Project[] = [
     {
+        name: "convo.",
+        description:
+            "A messaging app. Built with Next.js 14, Typescript and TailwindCSS, Pusher.js for real-time events. Has all the features you could think of.",
+        image: convo,
+        imageMobile: convoMobile,
+        tags: [
+            "Typescript",
+            "Next.js",
+            "TailwindCSS",
+            "Zod",
+            "Prisma",
+            "MongoDB",
+            "React Query",
+        ],
+        demoLink: "https://convo-vasyaqwe.vercel.app/",
+        githubLink: "https://github.com/vasyaqwe/convo",
+    },
+    {
         name: "Discusst",
         description:
-            "A modern Reddit clone. Built with Next.js 13, Typescript and TailwindCSS, Uploadthing for image uploads, Next-Auth and Zod for schema validation.",
+            "A modern Reddit clone. Built with Next.js 14, Typescript and TailwindCSS, Uploadthing for image uploads, Next-Auth and Zod.",
         image: discusst,
         imageMobile: discusstMobile,
         tags: [

@@ -172,10 +172,11 @@ export default function Home() {
                 <ul className="m flex flex-wrap justify-center gap-3">
                     {skills.map((skill) => (
                         <Pill
-                            className="rounded-lg pb-[2px] text-size-400 md:rounded-xl md:px-4 md:py-1 lg:text-size-400"
+                            className="rounded-xl pb-[2px] text-size-400 md:px-4 md:py-1 lg:text-size-400"
                             key={skill}
-                            text={skill}
-                        />
+                        >
+                            {skill}
+                        </Pill>
                     ))}
                 </ul>
             </Section>

@@ -14,9 +14,9 @@ export function Project({ item }: { item: ProjectProps }) {
     return (
         <motion.article
             whileTap={{ cursor: "grabbing" }}
-            className={`mb:pb-0 group snap-center relative flex cursor-default flex-col overflow-hidden rounded-md border border-neutral-200 bg-neutral-100/50 px-5 py-6 pb-0
-             shadow-md transition-colors hover:bg-neutral-200/75 max-md:max-h-[500px] sm:rounded-lg sm:px-7 sm:py-8 md:grid
-              md:min-h-[300px] md:w-[750px] md:flex-shrink-0 md:grid-cols-2 md:gap-16 md:p-8 md:pb-0 lg:pb-0
+            className={`mb:pb-0 group relative flex cursor-default snap-center flex-col overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100/50 px-5 py-5 pb-0
+             shadow-md transition-colors hover:bg-neutral-200/75 max-md:max-h-[500px] sm:rounded-2xl sm:px-7 sm:py-8 md:grid
+              md:min-h-[300px] md:w-[760px] md:flex-shrink-0 md:grid-cols-2 md:gap-14 md:p-8 md:pb-0 lg:pb-0
              `}
         >
             <div className="flex flex-col gap-2 group-odd:col-start-2">
@@ -26,10 +26,7 @@ export function Project({ item }: { item: ProjectProps }) {
                 </p>
                 <ul className="mb-4 mt-2 flex flex-wrap gap-2 gap-y-3">
                     {item.tags.map((tag) => (
-                        <Pill
-                            text={tag}
-                            key={tag}
-                        />
+                        <Pill key={tag}>{tag}</Pill>
                     ))}
                 </ul>
                 <div className="mt-auto flex gap-2 pb-5 md:gap-3 md:pb-8">
@@ -69,9 +66,9 @@ export function Project({ item }: { item: ProjectProps }) {
             <Image
                 loading="eager"
                 draggable={false}
-                className={`self-end rounded-tl-lg rounded-tr-lg object-cover object-top 
+                className={`self-end rounded-tl-xl rounded-tr-xl object-cover object-top 
                     transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end max-xs:hidden sm:shadow-lg md:col-start-2
-                 md:max-h-[340px] md:min-w-[640px] md:group-odd:md:rounded-tr-lg
+                 md:max-h-[340px] md:min-w-[640px] md:group-odd:md:rounded-tr-xl
                     md:group-hover:-translate-x-3 md:group-hover:-rotate-3 md:group-hover:scale-105
                    md:group-odd:group-hover:translate-x-3 md:group-odd:group-hover:rotate-3
                     `}
@@ -83,7 +80,7 @@ export function Project({ item }: { item: ProjectProps }) {
             <Image
                 loading="eager"
                 draggable={false}
-                className={`row-span-1 mt-auto self-end rounded-tl-md rounded-tr-md object-cover object-top shadow-md transition-transform 
+                className={`row-span-1 mt-auto self-end rounded-tl-xl rounded-tr-xl object-cover object-top shadow-md transition-transform 
                     duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end xs:hidden 
                     `}
                 src={item.imageMobile}

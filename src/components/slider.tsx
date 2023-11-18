@@ -64,7 +64,7 @@ export function Slider({ children, className = "", ...rest }: SliderProps) {
                 drag={offset > 0 ? "x" : undefined}
                 dragElastic={0.1}
                 dragConstraints={dragFieldRef}
-                className="flex gap-5 will-change-transform"
+                className="flex transform-gpu gap-5 will-change-transform"
             >
                 {children}
             </motion.div>

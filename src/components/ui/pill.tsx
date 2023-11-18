@@ -1,25 +1,29 @@
 import { cn } from "@/lib/utils"
+import { ComponentProps } from "react"
 
 export function Pill({
-    text,
+    children,
     className = "",
 }: {
-    text: string
     className?: string
-}) {
+} & ComponentProps<"li">) {
     return (
         <li
             className={cn(
-                `rounded-full px-[.66rem] text-[.75rem] shadow-md lg:text-size-300`,
+                `rounded-full px-[.66rem] text-[.8rem] shadow-md`,
                 className
             )}
             style={{
-                color: `hsl(var(--${formatText(text)}))`,
-                backgroundColor: `hsl(var(--${formatText(text)}) / .15)`,
-                border: `1px solid hsl(var(--${formatText(text)}) / .4)`,
+                color: `hsl(var(--${formatText(children?.toString() ?? "")}))`,
+                backgroundColor: `hsl(var(--${formatText(
+                    children?.toString() ?? ""
+                )}) / .15)`,
+                border: `1px solid hsl(var(--${formatText(
+                    children?.toString() ?? ""
+                )}) / .4)`,
             }}
         >
-            {text}
+            {children}
         </li>
     )
 }
