@@ -1,4 +1,5 @@
 "use client"
+
 import { nav } from "@/config"
 import { bounceIn } from "@/lib/motion"
 import { useGlobalStore } from "@/stores/use-global-store"
@@ -54,7 +55,7 @@ export function Navbar() {
                                             damping: 40,
                                         }}
                                         aria-hidden={"true"}
-                                        className="absolute inset-0 z-[-1] inline-block rounded-full bg-neutral-100/75"
+                                        className="absolute inset-0 z-[-1] inline-block rounded-full bg-gray-200/75"
                                     />
                                 )}
                             </Link>

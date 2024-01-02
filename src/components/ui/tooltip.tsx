@@ -1,10 +1,8 @@
 import { cn } from "@/lib/utils"
-import { ComponentProps, ReactNode, useState } from "react"
+import { type ComponentProps, useState } from "react"
 
 type TooltipProps = ComponentProps<"div"> & {
-    children: ReactNode
     text: string
-    className?: string
 }
 
 export const Tooltip = ({

@@ -1,12 +1,7 @@
 import { cn } from "@/lib/utils"
-import { ComponentProps } from "react"
+import { type ComponentProps } from "react"
 
-export function Pill({
-    children,
-    className = "",
-}: {
-    className?: string
-} & ComponentProps<"li">) {
+export function Pill({ children, className }: ComponentProps<"li">) {
     return (
         <li
             className={cn(

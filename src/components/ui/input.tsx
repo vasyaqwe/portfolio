@@ -1,12 +1,11 @@
 import { cn } from "@/lib/utils"
-import { ComponentProps } from "react"
+import { type ComponentProps } from "react"
 
 type InputProps = ComponentProps<"input"> & {
     invalid?: string
-    className?: string
 }
 
-export const Input = ({ invalid, className = "", ...rest }: InputProps) => {
+export const Input = ({ invalid, className, ...rest }: InputProps) => {
     const style = invalid
         ? "outline outline-[2px] outline-offset-2 outline-destructive"
         : "focus-state"

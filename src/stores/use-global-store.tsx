@@ -1,5 +1,5 @@
 import { nav } from "@/config"
-import { Section } from "@/types"
+import { type Section } from "@/types"
 import { create } from "zustand"
 
 interface StoreState {

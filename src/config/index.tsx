@@ -24,7 +24,7 @@ import quizzicalMobile from "@public/images/quizzical-mobile.png"
 import manageMobile from "@public/images/manage-mobile.png"
 import timenowMobile from "@public/images/timenow-mobile.png"
 import faqMobile from "@public/images/faq-mobile.png"
-import { Project } from "@/types"
+import { type Project } from "@/types"
 
 export const nav = [
     {
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     {
         name: "convo.",
         description:
-            "A messaging app. Built with Next.js 14, Typescript and TailwindCSS, Pusher.js for real-time events. Has all the features you could think of.",
+            "A messaging app. Real-time events with Pusher.js. Has all the features you could think of.",
         image: convo,
         imageMobile: convoMobile,
         tags: [
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     {
         name: "Discusst",
         description:
-            "A modern Reddit clone. Built with Next.js 14, Typescript and TailwindCSS, Uploadthing for image uploads, Next-Auth and Zod.",
+            "A modern Reddit clone. Infinite scroll feed, rich editor & image uploads for posts.",
         image: discusst,
         imageMobile: discusstMobile,
         tags: [
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     {
         name: "Eruca Invest",
         description:
-            "A landing page for Eruca. Built with Next.js 13, Typescript and TailwindCSS.",
+            "A landing page for Eruca. With an extensive ROI calculator & charts.",
         image: eruca,
         imageMobile: erucaMobile,
         tags: ["Typescript", "Next.js", "TailwindCSS"],

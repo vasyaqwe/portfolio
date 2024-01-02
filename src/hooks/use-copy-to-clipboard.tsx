@@ -6,7 +6,7 @@ export function useCopyToClipboard() {
 
     function onCopy(textToCopy: string) {
         if (canCopy) {
-            navigator.clipboard.writeText(textToCopy)
+            void navigator.clipboard.writeText(textToCopy)
             setCopied(true)
             setCanCopy(false)
 

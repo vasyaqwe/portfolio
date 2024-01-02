@@ -1,5 +1,6 @@
 "use client"
-import { projects } from "@/config"
+
+import { type projects } from "@/config"
 import React from "react"
 import { Pill } from "@/components/ui/pill"
 import Image from "next/image"
@@ -14,9 +15,10 @@ export function Project({ item }: { item: ProjectProps }) {
     return (
         <motion.article
             whileTap={{ cursor: "grabbing" }}
-            className={`mb:pb-0 group relative flex cursor-default snap-center flex-col overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100/50 px-5 py-5 pb-0
-             shadow-md transition-colors hover:bg-neutral-200/75 max-md:max-h-[500px] sm:rounded-2xl sm:px-7 sm:py-8 md:grid
-              md:min-h-[300px] md:w-[760px] md:flex-shrink-0 md:grid-cols-2 md:gap-14 md:p-8 md:pb-0 lg:pb-0
+            className={`mb:pb-0 group relative mr-4 flex min-w-0 cursor-default flex-col overflow-hidden rounded-xl border border-gray-200/75 bg-white/80
+             px-5 py-5 pb-0 shadow-sm transition-colors hover:bg-neutral-50
+             max-md:max-h-[65svh] max-sm:flex-shrink-0 max-sm:flex-grow-0 max-sm:basis-full sm:w-[500px] sm:flex-shrink-0 sm:rounded-2xl md:grid md:min-h-[300px]
+              md:w-[760px] md:grid-cols-2 md:gap-12 md:p-8 md:px-7 md:py-8 md:pb-0 lg:pb-0
              `}
         >
             <div className="flex flex-col gap-2 group-odd:col-start-2">
@@ -67,10 +69,10 @@ export function Project({ item }: { item: ProjectProps }) {
                 loading="eager"
                 draggable={false}
                 className={`self-end rounded-tl-xl rounded-tr-xl object-cover object-top 
-                    transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end max-xs:hidden sm:shadow-lg md:col-start-2
+                    transition-transform duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end max-md:hidden sm:shadow-lg md:col-start-2
                  md:max-h-[340px] md:min-w-[640px] md:group-odd:md:rounded-tr-xl
-                    md:group-hover:-translate-x-3 md:group-hover:-rotate-3 md:group-hover:scale-105
-                   md:group-odd:group-hover:translate-x-3 md:group-odd:group-hover:rotate-3
+                    md:group-hover:-translate-x-2 md:group-hover:-rotate-2 md:group-hover:scale-[103%]
+                   md:group-odd:group-hover:translate-x-2 md:group-odd:group-hover:rotate-2
                     `}
                 src={item.image}
                 alt={item.name}
@@ -81,7 +83,7 @@ export function Project({ item }: { item: ProjectProps }) {
                 loading="eager"
                 draggable={false}
                 className={`row-span-1 mt-auto self-end rounded-tl-xl rounded-tr-xl object-cover object-top shadow-md transition-transform 
-                    duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end xs:hidden 
+                    duration-300 group-odd:col-start-1 group-odd:row-start-1 group-odd:justify-self-end md:hidden 
                     `}
                 src={item.imageMobile}
                 alt={item.name}

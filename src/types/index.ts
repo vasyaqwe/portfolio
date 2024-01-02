@@ -1,5 +1,5 @@
-import { nav } from "@/config"
-import { StaticImageData } from "next/image"
+import { type nav } from "@/config"
+import { type StaticImageData } from "next/image"
 
 export type HomepageListItem = {
     title: string

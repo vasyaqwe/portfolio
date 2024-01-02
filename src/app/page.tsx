@@ -8,10 +8,9 @@ import { ContactForm } from "@/components/forms/contact-form"
 import { projects, skills } from "@/config"
 import { Project } from "@/components/project"
 import { Section } from "@/components/section"
-import { Slider } from "@/components/slider"
+import { Carousel } from "@/components/carousel"
 import { Pill } from "@/components/ui/pill"
 import { DividerArrow } from "@/components/ui/divider-arrow"
-import { MobileSlider } from "@/components/mobile-slider"
 
 export default function Home() {
     return (
@@ -25,7 +24,7 @@ export default function Home() {
                 className="container pt-40"
             >
                 <Image
-                    className="mx-auto h-32 w-32 rounded-full border-4 border-white object-cover object-top shadow-lg"
+                    className="mx-auto h-32 w-32 rounded-full border-2 border-white object-cover object-top shadow-lg"
                     src={avatar}
                     alt={"Vasyl Polishchuk"}
                 />
@@ -118,16 +117,8 @@ export default function Home() {
                     <strong>full-stack development</strong> just recently.{" "}
                 </p>
                 <p>
-                    I'm very passionate about web dev, and always try to stay
-                    up-to-date with the latest technologies.
-                </p>
-                <p>
-                    I love web dev and I love to learn new stuff about it. I
-                    love to do it right, always keep my HTML semantic😅
-                </p>
-                <p className="mt-2">
-                    Outside of coding - <strong>I'm into gaming</strong>. Been
-                    gaming my whole life.
+                    I love web dev and I love to learn something new about it
+                    everyday, any stay up-to-date with the latest tech.
                 </p>
             </Section>
             <Section
@@ -135,23 +126,23 @@ export default function Home() {
                 id="projects"
                 className="px-3 md:px-6"
             >
-                <h2 className="mb-3 text-center text-size-800 xs:mb-6 md:mb-10 xl:mb-12">
+                <h2 className="mb-6 text-center text-size-800 md:mb-10 xl:mb-12">
                     My projects
                 </h2>
-                <Slider className="max-md:hidden">
+                <Carousel>
                     {projects.map((project) => (
                         <Project
                             key={project.name}
                             item={project}
                         />
                     ))}
-                </Slider>
-                <MobileSlider
+                </Carousel>
+                {/* <MobileSlider
                     slidesList={projects}
                     slide={Project}
                     sliderClassName="h-[515px]"
                     className="md:hidden"
-                />
+                /> */}
             </Section>
             <Section
                 section="Skills"

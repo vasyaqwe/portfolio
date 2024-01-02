@@ -2,7 +2,7 @@ import { ContactFormEmail } from "@/components/email/contact-form-email"
 import { getSafeErrorMessage } from "@/lib/utils"
 import { contactSchema } from "@/lib/validations/contact"
 import { Resend } from "resend"
-import * as z from "zod"
+import { z } from "zod"
 
 export async function POST(request: Request) {
     try {

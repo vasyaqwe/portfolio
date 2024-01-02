@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/layout/navbar"
 import "./globals.css"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Josefin_Sans } from "next/font/google"
 import { TanstackProvider } from "@/components/tanstack-provider"
 import { Toaster } from "react-hot-toast"
@@ -18,6 +18,11 @@ export const metadata: Metadata = {
         "I am a professional full-stack developer with a couple years of experience.",
 }
 
+export const viewport: Viewport = {
+    initialScale: 1,
+    maximumScale: 1,
+}
+
 export default function RootLayout({
     children,
 }: {
@@ -26,11 +31,11 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="scroll-pt-40 overflow-x-hidden scroll-smooth antialiased"
+            className="scroll-pt-32 overflow-x-hidden scroll-smooth antialiased md:scroll-pt-40"
         >
             <body
                 className={`${primary.variable} ${secondary.variable} grainy-bg relative min-h-screen overflow-hidden 
-                bg-gray-50 font-primary text-size-400 leading-loose text-neutral-900`}
+                bg-gray-50/50 font-primary text-size-400 leading-loose text-neutral-900`}
             >
                 <Toaster />
                 <div
@@ -38,7 +43,6 @@ export default function RootLayout({
                     aria-hidden={true}
                 />
                 <div
-                    //perf fix
                     className="absolute left-[40%] z-[-1] h-[20rem] w-[20rem] transform-gpu bg-purple-100 blur-[11rem] md:h-[30rem] md:w-[30rem]"
                     aria-hidden={true}
                 />

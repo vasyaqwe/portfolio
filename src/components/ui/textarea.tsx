@@ -1,9 +1,8 @@
 import { cn } from "@/lib/utils"
-import { ComponentProps } from "react"
+import { type ComponentProps } from "react"
 
 type InputProps = ComponentProps<"textarea"> & {
     invalid?: string
-    className?: string
 }
 
 export const Textarea = ({ invalid, className = "", ...rest }: InputProps) => {
@@ -23,7 +22,7 @@ export const Textarea = ({ invalid, className = "", ...rest }: InputProps) => {
                 {...rest}
             />
             {invalid && (
-                <p className={`text-destructive mt-1 text-left`}>{invalid}</p>
+                <p className={`mt-1 text-left text-destructive`}>{invalid}</p>
             )}
         </div>
     )

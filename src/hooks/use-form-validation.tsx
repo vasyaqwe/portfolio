@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { ZodIssueBase } from "zod"
-import * as z from "zod"
+import { type ZodIssueBase } from "zod"
+import { type z } from "zod"
 
 export type ValidationErrors = Record<string, string>
 

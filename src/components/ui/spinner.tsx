@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils"
-import { ComponentProps } from "react"
+import { type ComponentProps } from "react"
 
-type SpinnerProps = ComponentProps<"div"> & {
-    className?: string
-}
+type SpinnerProps = ComponentProps<"div">
 
 export const Spinner = ({ className = "", ...rest }: SpinnerProps) => {
     return (

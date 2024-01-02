@@ -1,14 +1,14 @@
 "use client"
+
 import { useGlobalStore } from "@/stores/use-global-store"
-import { Section } from "@/types"
-import { HTMLMotionProps, motion } from "framer-motion"
-import React, { ReactNode, useEffect } from "react"
-import { HTMLAttributes } from "react"
+import { type Section } from "@/types"
+import { type HTMLMotionProps, motion } from "framer-motion"
+import React, { useEffect } from "react"
+import { type HTMLAttributes } from "react"
 import { useInView } from "react-intersection-observer"
 
 type SectionProps = HTMLAttributes<HTMLElement> &
     HTMLMotionProps<"section"> & {
-        children: ReactNode
         section: Section
         threshold?: number
     }
